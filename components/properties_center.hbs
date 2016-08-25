@@ -1,0 +1,798 @@
+<div class="modal fade" id="propertyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑房源</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal property_form" action="" method="post" onsubmit="return false;">
+          <input type="hidden" name="" id="editId">
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="name" name="oData[name]" required>
+                    <label for="">房源名称</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <select name="oData[roomType]" id="roomType" class="form-control"></select>
+                    <label for="example2-select2-multiple">房间类型</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <select name="oData[propertyType]" id="propertyType" class="form-control"></select>
+                    <label for="">房源类型</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="maxGuest" name="oData[maxGuest]">
+                    <label for="">最多接待房客</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="bedroomCount" name="oData[bedroomCount]">
+                    <label for="">卧室数量</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="bedCount" name="oData[bedCount]">
+                    <label for="">床的数量</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="bathroomCount" name="oData[bathroomCount]">
+                    <label for="">洗手间数量</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <select name="oData[CheckInTime]" id="CheckInTime" class="form-control">
+                      <option value="14">14点以后</option>
+                      <option value="15">15点以后</option>
+                      <option value="16">16点以后</option>
+                      <option value="17">17点以后</option>
+                      <option value="18">18点以后</option>
+                    </select>
+                    <label for="">入住时间</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <select name="oData[CheckOutTime]" id="CheckOutTime" class="form-control">
+                      <option value="10">10点前</option>
+                      <option value="11">11点前</option>
+                      <option value="12">12点前</option>
+                      <option value="13">13点前</option>
+                      <option value="14">14点前</option>
+                    </select>
+                    <label for="">退房时间</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="deposit" name="oData[deposit]" placeholder="$">
+                    <label for="">押金</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="tax" name="oData[tax]" placeholder="%" value="0">
+                    <label for="">住宿税</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="price" name="oData[price]">
+                            <label for="">价格</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="lessDays" name="oData[lessDays]">
+                            <label for="">最少租用天数</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="CleanFee" name="oData[CleanFee]" placeholder="每次" value="0">
+                            <label for="">清洁费</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="ServiceFee" name="oData[ServiceFee]" placeholder="每次" value="0">
+                            <label for="">服务费</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="discountWeekly" name="oData[discount][weekly]" placeholder="%"value="0">
+                            <label for="">整周折扣</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="discountMonth" name="oData[discount][month]" placeholder="%" value="0">
+                            <label for="">整月折扣</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <select name="oData[available]" id="available" class="form-control">
+                                <option value="0">可租用</option>
+                                <option value="1">暂时不方便出租</option>
+                            </select>
+                            <label for="">可租用状态</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="pOwnBy" name="oData[ownBy]">
+                            <label for="">房东objId</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <select name="oData[Status]" id="Status" class="form-control">
+                                <option value="0">正常显示出来</option>
+                                <option value="1">正在审核,前台隐藏</option>
+                                <!-- <option value="2">被毙掉了,在前后台都隐藏</option> -->
+                            </select>
+                            <label for="">房源状态</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <select name="oData[city]" id="cityGroup" class="form-control"></select>
+                            <label for="example2-select2-multiple">所处城市圈</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="st" name="oData[addr][st]">
+                            <label for="">街道</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="addrCity" name="oData[addr][city]">
+                            <label for="">城市</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="state" name="oData[addr][state]">
+                            <label for="">州</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="country" name="oData[addr][country]">
+                            <label for="">国家</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <input class="form-control" type="text" id="zipCode" name="oData[addr][zipCode]">
+                            <label for="">邮编</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-xs-12 m-b-10">
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <div class="form-material">
+                                <textarea class="form-control" id="remark" type="text" placeholder="请记录该房源的来源，如网址或excel表格的编号’"></textarea>
+                                <label for="">备注</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          <div class="form-group p-b-10 checkbox_area">
+            <div class="col-xs-12">
+              <div class="row">
+                  <label class="col-xs-2">基础设施</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="all" data-checked="commonAmenities" class="commonAmenities">全选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="none" data-checked="commonAmenities" class="commonAmenities">不选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="reverse"data-checked="commonAmenities" class="commonAmenities">反选</label>
+              </div>
+            </div>
+            <div class="col-xs-12 amenities_list cont"></div>
+            <!--<div class="tit text-primary col-xs-12 p-t-5"><span class="text">展开选择</span><span class="text dn">收起</span> <i class="fa fa-angle-down"></i></div>-->
+          </div>
+          <div class="form-group p-b-10 checkbox_area">
+            <div class="col-xs-12">
+              <div class="row">
+                  <label class="col-xs-2">其他便利设施</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="all" data-checked="otherAmenities" class="otherAmenities">全选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="none" data-checked="otherAmenities" class="otherAmenities">不选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="reverse"data-checked="otherAmenities" class="otherAmenities">反选</label>
+              </div>
+            </div>
+            <div class="col-xs-12 other_amenities_list cont"></div>
+            <!--<div class="tit text-primary col-xs-12 p-t-5"><span class="text">展开选择</span><span class="text dn">收起</span> <i class="fa fa-angle-down"></i></div>-->
+          </div>
+          <div class="form-group p-b-10 checkbox_area">
+            <div class="col-xs-12">
+              <div class="row">
+                  <label class="col-xs-2">周边设施</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="all" data-checked="surrounding" class="surrounding">全选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="none" data-checked="surrounding" class="surrounding">不选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="reverse"data-checked="surrounding" class="surrounding">反选</label>
+              </div>
+            </div>
+            <div class="col-xs-12 surround_list cont"></div>
+            <!--<div class="tit text-primary col-xs-12 p-t-5"><span class="text">展开选择</span><span class="text dn">收起</span> <i class="fa fa-angle-down"></i></div>-->
+          </div>
+          <div class="form-group p-b-10 checkbox_area">
+            <div class="col-xs-12">
+              <div class="row">
+                  <label class="col-xs-2">增值服务</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="all" data-checked="valueAddedServiece" class="valueAddedServiece">全选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="none" data-checked="valueAddedServiece" class="valueAddedServiece">不选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="reverse"data-checked="valueAddedServiece" class="valueAddedServiece">反选</label>
+              </div>
+            </div>
+            <div class="col-xs-12 value_list cont"></div>
+            <!--<div class="tit text-primary col-xs-12 p-t-5"><span class="text">展开选择</span><span class="text dn">收起</span> <i class="fa fa-angle-down"></i></div>-->
+          </div>
+          <div class="form-group p-b-10 checkbox_area">
+            <div class="col-xs-12">
+              <div class="row">
+                  <label class="col-xs-2">安全设施</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="all" data-checked="securityAmenities" class="securityAmenities">全选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="none" data-checked="securityAmenities" class="securityAmenities">不选</label>
+                  <label class="checkbox-inline" style="padding-top:0px"> <input type="checkbox" data-attr="reverse" data-checked="securityAmenities" class="securityAmenities">反选</label>
+
+
+              </div>
+            </div>
+            <div class="col-xs-12 security_list cont"></div>
+            <!--<div class="tit text-primary col-xs-12 p-t-5"><span class="text">展开选择</span><span class="text dn">收起</span> <i class="fa fa-angle-down"></i></div>-->
+          </div>
+          <div class="row">
+            <div class="col-xs-12 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <!--<textarea name="oData[rule][other]" id="ruleOther" cols="" class="form-control"></textarea>-->
+                    <div class="summernote" id="summernoteRule"></div>
+                    <label for="">房屋守则</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <!--<textarea name="oData[description]" id="description" cols="" class="form-control"></textarea>-->
+                    <div class="summernote" id="summernoteDesc"></div>
+                    <label for="">房源描述</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row items-push">
+             <div class="col-xs-12 m-b-10">
+              <div class="form-group">
+                      <div class="col-md-12">
+                          <button id="if_calendar" type="button" class="btn btn-primary m-b-10">禁用日历</button>
+                          <div class="show-calendar" style="display:none">
+                              <div id="calendar" class="js-calendar"> </div>
+                              <div class="m-t-10 m-b-10">
+                                  <label class="control-label">禁用时间</label>
+                              </div>
+                              <div class="row">
+                                  <div class="col-md-6 col-xs-12" >
+                                      <div class="input-group input-large date-picker input-daterange">
+                                          <input type="text" class="form-control" name="from" id="full_start">
+                                          <span class="input-group-addon"> to </span>
+                                          <input type="text" class="form-control" name="to" id="full_end">
+                                      </div>
+                                  </div>
+                                  <div class="col-md-2 col-xs-12" >
+                                      <input type="text" class="form-control" placeholder="房源名称" value="日期不可用" id="full_title" readonly="readonly"style="font-size: 12px;">
+                                  </div>
+                                  <div class="col-md-4 col-xs-12" >
+                                      <button type="button" class="btn btn-default" id="add">新建</button>
+                                      <button id="all" type="button" class="btn btn-default">清除所有</button>
+                                  </div>
+                              </div>
+                          </div>
+                  </div>
+              </div>
+             </div>
+          </div>
+        </form>
+        <div class="p-t-30">
+          <a href="#;" class="btn btn-primary start_qiniu">上传照片</a>
+        </div>
+        <div class="p-t-30 qiniu_area dn">
+          <div class="row">
+            <input type="hidden" id="domain" value="">
+            <input type="hidden" id="uptoken">
+            <div class="col-md-12 m-b-20">
+              <div id="container">
+                <p>即时上传,默认第一张图片为封面</p>
+                <a class="btn btn-default btn-lg " id="pickfiles" href="#" >
+                  <i class="glyphicon glyphicon-plus"></i>
+                  <span>选择文件</span>
+                </a>
+              </div>
+            </div>
+            <div style="display:none" id="success" class="col-md-12">
+              <div class="alert-success p-10">
+                队列全部文件处理完毕
+              </div>
+            </div>
+            <div class="col-md-12 ">
+              <table class="table table-striped table-hover text-left"   style="margin-top:40px;display:none">
+                <thead>
+                <tr>
+                  <th class="col-md-4">文件名</th>
+                  <th class="col-md-2">文件大小</th>
+                  <th class="col-md-6">细节</th>
+                </tr>
+                </thead>
+                <tbody id="fsUploadProgress">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default reset_file dn">清空图片</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary btn_save">保存</button>
+        <button type="button" class="btn btn-success btn_save go_on">继续添加</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content bg-gray-lighter">
+  <div class="row items-push">
+    <div class="col-sm-7">
+      <h1 class="page-heading">
+        房源中心 <small>房源的增删查改</small>
+      </h1>
+    </div>
+    <div class="col-sm-5 text-right hidden-xs">
+      <ol class="breadcrumb push-10-t">
+        <li>首页</li>
+        <li><a class="link-effect" href="">房源中心</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="block">
+
+
+    <div class="block-header">
+      <ul class="block-options">
+        <li>
+          <button type="button"><i class="fa fa-share"></i></button>
+        </li>
+      </ul>
+      <h3 class="block-title">房源查询过滤条件</h3>
+      <!-- <div class="p-t-10">
+        <div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h3 class="font-w300 push-15">Warning</h3>
+          <p>1. admin able to export the table to a excel when click the icon witch at right</p>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="block-content">
+      <form id="filter-search" class="form-horizontal push-10-t filter_form" action="" method="post">
+        <div class="row">
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+                  <select id="filter-cityGroup" class="form-control" multiple="multiple" style="width:100%"></select>
+                  <label for="example-autocomplete2">所处城市圈</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+                  <input class="form-control" type="text" id="filter-checkin" name="oData[objectId]" placeholder="不限制" />
+                  <label for="example-autocomplete2">可租用开始日期</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+                  <input class="form-control" type="text" id="filter-checkout" name="oData[objectId]" placeholder="不限制" />
+                  <label for="example-autocomplete2">可租用结束日期</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <input class="form-control" type="text" id="filter-minPrice" name="oData[objectId]" placeholder="不限制" />
+                    </div>
+                    <div class="col-xs-6">
+                      <input class="form-control" type="text" id="filter-maxPrice" name="oData[objectId]" placeholder="不限制" />
+                    </div>
+                  </div>
+
+                  <label for="example-autocomplete2">价格范围</label>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix visible-xs-block visible-md-block visible-lg-block"></div>
+
+
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+                  <select id="filter-propertyType" class="form-control" multiple="multiple" style="width:100%"></select>
+                  <label for="example-autocomplete2">房源类型</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+                  <select id="filter-roomType" class="form-control" multiple="multiple" style="width:100%"></select>
+                  <label for="example-autocomplete2">房间类型</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+
+                  <select name="oData[available]" id="filter-available" class="form-control">
+                    <option value="0">所有</option>
+                    <option value="1">可租用</option>
+                    <option value="2">暂时不方便出租</option>
+                  </select>
+
+                  <label for="example-autocomplete2">租用状态</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+
+                  <div class="row">
+                    <div class="col-xs-6">
+
+                      <select name="oData[available]" id="filter-minGuest" class="form-control">
+                        <option value="">最少</option>
+                        <option value="1">1 人</option>
+                        <option value="2">2 人</option>
+                        <option value="3">3 人</option>
+                        <option value="4">4 人</option>
+                        <option value="5">5 人</option>
+                        <option value="6">6 人</option>
+                        <option value="7">7 人</option>
+                        <option value="8">8 人</option>
+                        <option value="9">9 人</option>
+                        <option value="10">10 人</option>
+                        <option value="11">11 人</option>
+                        <option value="12">12 人</option>
+                        <option value="13">13 人</option>
+                        <option value="14">14 人</option>
+                        <option value="15">15 人</option>
+                        <option value="16">16+ 人</option>
+                      </select>
+
+                    </div>
+
+                    <div class="col-xs-6">
+
+                      <select name="oData[available]" id="filter-maxGuest" class="form-control">
+                        <option value="">最多</option>
+                        <option value="1">1 人</option>
+                        <option value="2">2 人</option>
+                        <option value="3">3 人</option>
+                        <option value="4">4 人</option>
+                        <option value="5">5 人</option>
+                        <option value="6">6 人</option>
+                        <option value="7">7 人</option>
+                        <option value="8">8 人</option>
+                        <option value="9">9 人</option>
+                        <option value="10">10 人</option>
+                        <option value="11">11 人</option>
+                        <option value="12">12 人</option>
+                        <option value="13">13 人</option>
+                        <option value="14">14 人</option>
+                        <option value="15">15 人</option>
+                        <option value="16">16+ 人</option>
+                      </select>
+
+                    </div>
+                  </div>
+
+                  <label for="example-autocomplete2">入住人数范围</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clearfix visible-xs-block visible-md-block visible-lg-block"></div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+                  <input class="form-control" type="text" id="filter-propertyId" name="oData[objectId]" placeholder="无">
+                  <label for="example-autocomplete2">根据objectId查询某个房源</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+                  <input class="form-control" type="text" id="filter-propertyName" name="oData[objectId]" placeholder="无">
+                  <label for="example-autocomplete2">根据房源名称查询(全称)</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+
+                  <div class="row">
+                    <div class="col-xs-12">
+                      <select name="oData[available]" id="filter-sort-by" class="form-control">
+                        <option value="">无</option>
+                        <option value="price">价格</option>
+                        <option value="createdAt">创建日期</option>
+                      </select>
+                    </div>
+                    <!--
+                    <div class="col-xs-6">
+                      <select name="oData[available]" id="filter-sort" class="form-control">
+                        <option value="0">升序</option>
+                        <option value="1">降序</option>
+                      </select>
+                    </div>
+                    -->
+                  </div>
+
+                  <label for="example-autocomplete2">条件排序</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+
+                  <select name="oData[available]" id="filter-status" class="form-control">
+                    <option value="0">全部可见</option>
+                    <option value="1">前台隐藏，后台可见</option>
+                    <!-- <option value="2">前后台都隐藏</option> -->
+                  </select>
+
+                  <label for="example-autocomplete2">可见状态</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="col-xs-12">
+          <button class="btn btn-primary">查询</button>
+        </div>
+      </form>
+      <div class="p-b-15"></div>
+    </div>
+  </div>
+  <br /><br />
+  <div class="block">
+    <div class="block-header">
+      <ul class="block-options">
+        <li>
+          <button type="button" data-toggle="modal" data-target="#propertyModal" id="openPropertyModal" class="btn_edit"><i class="fa fa-plus-circle"></i></button>
+        </li>
+      </ul>
+      <h3 class="block-title">房源列表</h3>
+      <!--<div class="p-t-10">-->
+        <!--<div class="alert alert-warning alert-dismissable">-->
+          <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+          <!--<h3 class="font-w300 push-15">Warning</h3>-->
+          <!--<ol>-->
+            <!--<li>新增或者编辑过的数据,需要刷新后才能继续操作编辑</li>-->
+          <!--</ol>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+
+    <div class="block-content">
+      <table class="table table-bordered table-striped" id="tablePropertiesList"></table>
+      <ul id="pagination-prop" class="pagination-sm"></ul>
+    </div>
+  </div>
+</div>
+<script src="js/controllers/properties_center.js?_v=1"></script>

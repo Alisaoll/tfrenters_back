@@ -1,0 +1,32 @@
+{
+	"name": "jQueryHandlebarsJS",
+	"title": "jQuery Handlebars javascript templates",
+	"description": "jQuery plugin for use Handlebars.js easy",
+	"keywords": [
+		"Handlebars",
+		"Templates",
+		"JavascriptTemplates",
+		"jQuery",
+		"jQuerytemplates",
+		"html5",
+		"jquery"
+	],
+	"version": "1.0.1",
+	"author": {
+		"name": "Quique Fdez Guerra",
+		"url" : "https://twitter.com/CKGrafico"
+	},
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "https://github.com/CKGrafico/jQuery_HandlebarsJS/blob/master/MIT-LICENSE.txt"
+		}
+	],
+	"bugs": "https://github.com/CKGrafico/jQuery_HandlebarsJS/issues",
+	"homepage": "https://github.com/CKGrafico/jQuery_HandlebarsJS/",
+	"docs": "https://github.com/CKGrafico/jQuery_HandlebarsJS/",
+	"download": "https://github.com/CKGrafico/jQuery_HandlebarsJS/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.5"
+	}
+}

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "content-static_pages.js",
+  "sourceRoot": "",
+  "sources": [
+    "content-static_pages.coffee"
+  ],
+  "names": [],
+  "mappings": ""
+}

@@ -1,0 +1,87 @@
+<div class="modal fade" id="propertyRoomTypeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑房源类型</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal property_room_type_form" action="" method="post" onsubmit="return false;">
+          <input type="hidden" name="" id="editId">
+          <div class="form-group">
+            <div class="col-xs-12">
+              <div class="form-material">
+                <input class="form-control" type="text" id="RoomType" name="oData[RoomType]" required>
+                <label for="">中文名称</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <div class="form-material">
+                <input class="form-control" type="text" id="RoomTypeEnglish" name="oData[RoomTypeEnglish]" required>
+                <label for="">英文名称</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <div class="form-material">
+                <select name="oData[Status]" id="Status" class="form-control">
+                  <option value="0">正常</option>
+                  <option value="1">隐藏</option>
+                </select>
+                <label for="">状态</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary btn_save">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content bg-gray-lighter">
+  <div class="row items-push">
+    <div class="col-sm-7">
+      <h1 class="page-heading">
+        房源中心 <small>房间类型的增删查改</small>
+      </h1>
+    </div>
+    <div class="col-sm-5 text-right hidden-xs">
+      <ol class="breadcrumb push-10-t">
+        <li>首页</li>
+        <li><a class="link-effect" href="">房间类型</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="block">
+    <div class="block-header">
+      <ul class="block-options">
+        <li>
+          <button type="button" data-toggle="modal" data-target="#propertyRoomTypeModal" id="openPropertyRoomTypeModal" class="btn_edit"><i class="fa fa-plus-circle"></i></button>
+        </li>
+      </ul>
+      <h3 class="block-title">房间类型</h3>
+      <div class="p-t-10">
+        <div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h3 class="font-w300 push-15">Warning</h3>
+          <p>admin able to add a new order when click the icon witch at right</p>
+        </div>
+      </div>
+    </div>
+    <div class="block-content">
+      <table class="table table-bordered table-striped" id="tablePropertiesRoomTypes"></table>
+    </div>
+  </div>
+</div>
+
+
+<!-- Page JS Code -->
+<script src="js/controllers/properties_room_type.js"></script>

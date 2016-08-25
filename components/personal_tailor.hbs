@@ -1,0 +1,85 @@
+<div class="content bg-gray-lighter">
+    <div class="row items-push">
+        <div class="col-sm-7">
+            <h1 class="page-heading">
+                私人定制
+            </h1>
+        </div>
+        <div class="col-sm-5 text-right hidden-xs">
+            <ol class="breadcrumb push-10-t">
+                <li>首页</li>
+                <li><a class="link-effect" href="">私人定制</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="block">
+    <div class="block-content">
+        <table class="table table-bordered table-striped" id="tablePropertiesList"></table>
+        <ul id="pagination-prop" class="pagination-sm"></ul>
+    </div>
+</div>
+</div>
+<div class="modal fade in" id="propertyModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" style="display:none;">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="myModalLabel">详细信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="block-content">
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td>用户名</td>
+                                <td class="custorm_sname"></td>
+                                <td>手机号</td>
+                                <td class="custorm_nphone"></td>
+
+                            </tr>
+                            <tr>
+                                <td>邮箱</td>
+                                <td class="custorm_semail"></td>
+                                <td>微信</td>
+                                <td class="custorm_nwechat"></td>
+                            </tr>
+                            <tr>
+
+                                <td>目的地</td>
+                                <td class="sDestination"></td>
+                                <td>出行人数</td>
+                                <td class="nPeople"></td>
+                            </tr>
+                            <tr>
+                                <td>住房日期</td>
+                                <td class="dCheckIn"></td>
+                                <td>退房日期</td>
+                                <td class="dCheckOut"></td>
+                            </tr>
+                            <tr>
+                                <td>出行预算</td>
+                                <td class="nBudget"></td>
+                                <td>出行路线</td>
+                                <td class="sPath"></td>
+                            </tr>
+                            <tr>
+                                <td>需要的服务和帮助</td>
+                                <td colspan="3" class="sHelp"></td>
+                            </tr>
+                        <tr>
+                            <td>备注</td>
+                            <td colspan="3" class="custorm_sremark"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn_save">已读</button>
+            </div>
+    </div>
+</div>
+</div>
+<script src="js/controllers/personal_tailor.js"></script>

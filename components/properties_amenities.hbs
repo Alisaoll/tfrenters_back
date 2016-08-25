@@ -1,0 +1,102 @@
+<div class="modal fade" id="propertyAmenModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑房源设施</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal property_amenities_form" action="" method="post" onsubmit="return false;">
+          <input type="hidden" name="" id="editId">
+          <div class="form-group">
+            <div class="col-xs-12">
+              <div class="form-material">
+                <select name="oData[type]" id="type" class="form-control">
+                  <option value="1" selected>基础设施</option>
+                  <option value="2">周边设施</option>
+                  <option value="3">增值服务</option>
+                  <option value="4">其他便利设施</option>
+                  <option value="5">安全设施</option>
+                </select>
+                <label for="">类型</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <div class="form-material">
+                <input class="form-control" type="text" id="name" name="oData[name]" required>
+                <label for="">中文名称</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <div class="form-material">
+                <input class="form-control" type="text" id="englishName" name="oData[englishName]" required>
+                <label for="">英文名称</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-xs-12">
+              <div class="form-material">
+                <select name="oData[Status]" id="Status" class="form-control">
+                  <option value="0">正常</option>
+                  <option value="1">隐藏</option>
+                </select>
+                <label for="">状态</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary btn_save">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content bg-gray-lighter">
+  <div class="row items-push">
+    <div class="col-sm-7">
+      <h1 class="page-heading">
+        房源中心 <small>房源设施的增删查改</small>
+      </h1>
+    </div>
+    <div class="col-sm-5 text-right hidden-xs">
+      <ol class="breadcrumb push-10-t">
+        <li>首页</li>
+        <li><a class="link-effect" href="">房源设施</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="block">
+    <div class="block-header">
+      <ul class="block-options">
+        <li>
+          <button type="button" data-toggle="modal" data-target="#propertyAmenModal" id="openPropertyAmenModal" class="btn_edit"><i class="fa fa-plus-circle"></i></button>
+        </li>
+      </ul>
+      <h3 class="block-title">房源设施</h3>
+      <div class="p-t-10">
+        <div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h3 class="font-w300 push-15">Warning</h3>
+          <p>admin able to add a new order when click the icon witch at right</p>
+        </div>
+      </div>
+    </div>
+    <div class="block-content">
+      <table class="table table-bordered table-striped" id="tablePropertiesAmenities"></table>
+        <ul id="pagination-prop" class="pagination-sm"></ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- Page JS Code -->
+<script src="js/controllers/properties_amenities.js"></script>

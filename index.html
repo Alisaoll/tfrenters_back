@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!--[if IE 9]>         <html class="ie9 no-focus"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-focus"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <title>途风短租-管理后台</title>
+
+  <meta name="description" content="">
+  <meta name="author" content="pixelcave">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0">
+
+  <link rel="shortcut icon" href="static/assets/img/favicons/favicon.png">
+
+  <link rel="icon" type="image/png" href="static/assets/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="static/assets/img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="static/assets/img/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="static/assets/img/favicons/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="static/assets/img/favicons/favicon-192x192.png" sizes="192x192">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="static/assets/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="static/assets/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="static/assets/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="static/assets/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="static/assets/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="static/assets/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="static/assets/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="static/assets/img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="static/assets/img/favicons/apple-touch-icon-180x180.png">
+</head>
+<body>
+<div class="login_modal">
+  <div class="bg-white pulldown">
+    <div class="content content-boxed overflow-hidden">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-4 col-lg-offset-4">
+          <div class="push-30-t push-50 animated fadeIn">
+            <div class="text-center">
+              <i class="fa fa-2x fa-circle-o-notch text-primary"></i>
+              <p class="text-muted push-15-t">途风短租</p>
+            </div>
+            <form class="js-validation-login form-horizontal push-30-t" action="" method="post">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material form-material-primary floating">
+                    <input class="form-control" type="text" id="login-username" name="login-username" value="">
+                    <!--renters_admin-->
+                    <label for="login-username">用户名</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material form-material-primary floating">
+                    <input class="form-control" type="password" id="login-password" name="login-password" value="">
+                    <!--L7gX!h-->
+                    <label for="login-password">密码</label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group push-30-t">
+                <div class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                  <a href="#;" class="btn btn-sm btn-block btn-primary submit_login">登录</a>
+                </div>
+              </div>
+            </form>
+            <!-- END Login Form -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+  <aside id="side-overlay">
+    <div id="side-overlay-scroll">
+      <div class="side-header side-content">
+        <button class="btn btn-default pull-right" type="button" data-toggle="layout" data-action="side_overlay_close">
+          <i class="fa fa-times"></i>
+        </button>
+        <span>
+            <img class="img-avatar img-avatar32" src="static/assets/img/avatars/avatar10.jpg" alt="">
+            <span class="font-w600 push-10-l">Ryan Hall</span>
+        </span>
+      </div>
+      <div class="side-content remove-padding-t">
+        <div class="block pull-r-l border-t">
+          <ul class="nav nav-tabs nav-tabs-alt nav-justified" data-toggle="tabs">
+            <li class="active">
+              <a href="#tabs-side-overlay-overview"><i class="fa fa-fw fa-coffee"></i> Overview</a>
+            </li>
+            <li>
+              <a href="#tabs-side-overlay-sales"><i class="fa fa-fw fa-line-chart"></i> Sales</a>
+            </li>
+          </ul>
+          <div class="block-content tab-content">
+            <!-- Overview Tab -->
+            <div class="tab-pane fade fade-right in active" id="tabs-side-overlay-overview">
+              <!-- Activity -->
+              <div class="block pull-r-l">
+                <div class="block-header bg-gray-lighter">
+                  <ul class="block-options">
+                    <li>
+                      <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                    </li>
+                    <li>
+                      <button type="button" data-toggle="block-option" data-action="content_toggle"></button>
+                    </li>
+                  </ul>
+                  <h3 class="block-title">Recent Activity</h3>
+                </div>
+                <div class="block-content">
+                  <!-- Activity List -->
+                  <ul class="list list-activity">
+                    <li>
+                      <i class="si si-wallet text-success"></i>
+                      <div class="font-w600">New sale ($15)</div>
+                      <div><a href="javascript:void(0)">Admin Template</a></div>
+                      <div><small class="text-muted">3 min ago</small></div>
+                    </li>
+                    <li>
+                      <i class="si si-pencil text-info"></i>
+                      <div class="font-w600">You edited the file</div>
+                      <div><a href="javascript:void(0)"><i class="fa fa-file-text-o"></i> Documentation.doc</a></div>
+                      <div><small class="text-muted">15 min ago</small></div>
+                    </li>
+                    <li>
+                      <i class="si si-close text-danger"></i>
+                      <div class="font-w600">Project deleted</div>
+                      <div><a href="javascript:void(0)">Line Icon Set</a></div>
+                      <div><small class="text-muted">4 hours ago</small></div>
+                    </li>
+                  </ul>
+                  <!-- END Activity List -->
+                </div>
+              </div>
+              <!-- END Activity -->
+
+              <!-- Online Friends -->
+              <div class="block pull-r-l">
+                <div class="block-header bg-gray-lighter">
+                  <ul class="block-options">
+                    <li>
+                      <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
+                    </li>
+                    <li>
+                      <button type="button" data-toggle="block-option" data-action="content_toggle"></button>
+                    </li>
+                  </ul>
+                  <h3 class="block-title">Online Friends</h3>
+                </div>
+                <div class="block-content block-content-full">
+                  <!-- Users Navigation -->
+                  <ul class="nav-users remove-margin-b">
+                    <li>
+                      <a href="base_pages_profile.html">
+                        <img class="img-avatar" src="static/assets/img/avatars/avatar7.jpg" alt="">
+                        <i class="fa fa-circle text-success"></i> Amy Hunter
+                        <div class="font-w400 text-muted"><small>Copywriter</small></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="base_pages_profile.html">
+                        <img class="img-avatar" src="static/assets/img/avatars/avatar11.jpg" alt="">
+                        <i class="fa fa-circle text-success"></i> Vincent Sims
+                        <div class="font-w400 text-muted"><small>Web Developer</small></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="base_pages_profile.html">
+                        <img class="img-avatar" src="static/assets/img/avatars/avatar7.jpg" alt="">
+                        <i class="fa fa-circle text-success"></i> Ann Parker
+                        <div class="font-w400 text-muted"><small>Web Designer</small></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="base_pages_profile.html">
+                        <img class="img-avatar" src="static/assets/img/avatars/avatar6.jpg" alt="">
+                        <i class="fa fa-circle text-warning"></i> Emma Cooper
+                        <div class="font-w400 text-muted"><small>Photographer</small></div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="base_pages_profile.html">
+                        <img class="img-avatar" src="static/assets/img/avatars/avatar13.jpg" alt="">
+                        <i class="fa fa-circle text-warning"></i> Ronald George
+                        <div class="font-w400 text-muted"><small>Graphic Designer</small></div>
+                      </a>
+                    </li>
+                  </ul>
+                  <!-- END Users Navigation -->
+                </div>
+              </div>
+              <!-- END Online Friends -->
+
+              <!-- Quick Settings -->
+              <div class="block pull-r-l">
+                <div class="block-header bg-gray-lighter">
+                  <ul class="block-options">
+                    <li>
+                      <button type="button" data-toggle="block-option" data-action="content_toggle"></button>
+                    </li>
+                  </ul>
+                  <h3 class="block-title">Quick Settings</h3>
+                </div>
+                <div class="block-content">
+                  <!-- Quick Settings Form -->
+                  <form class="form-bordered" action="index.html" method="post" onsubmit="return false;">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-8">
+                          <div class="font-s13 font-w600">Online Status</div>
+                          <div class="font-s13 font-w400 text-muted">Show your status to all</div>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                          <label class="css-input switch switch-sm switch-primary push-10-t">
+                            <input type="checkbox"><span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-8">
+                          <div class="font-s13 font-w600">Auto Updates</div>
+                          <div class="font-s13 font-w400 text-muted">Keep up to date</div>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                          <label class="css-input switch switch-sm switch-primary push-10-t">
+                            <input type="checkbox"><span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-8">
+                          <div class="font-s13 font-w600">Notifications</div>
+                          <div class="font-s13 font-w400 text-muted">Do you need them?</div>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                          <label class="css-input switch switch-sm switch-primary push-10-t">
+                            <input type="checkbox" checked><span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-8">
+                          <div class="font-s13 font-w600">API Access</div>
+                          <div class="font-s13 font-w400 text-muted">Enable/Disable access</div>
+                        </div>
+                        <div class="col-xs-4 text-right">
+                          <label class="css-input switch switch-sm switch-primary push-10-t">
+                            <input type="checkbox" checked><span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- END Quick Settings Form -->
+                </div>
+              </div>
+              <!-- END Quick Settings -->
+            </div>
+            <!-- END Overview Tab -->
+
+            <!-- Sales Tab -->
+            <div class="tab-pane fade fade-left" id="tabs-side-overlay-sales">
+              <div class="block pull-r-l">
+                <!-- Stats -->
+                <div class="block-content pull-t">
+                  <div class="row items-push">
+                    <div class="col-xs-6">
+                      <div class="font-w700 text-gray-darker text-uppercase">Sales</div>
+                      <a class="h3 font-w300 text-primary" href="javascript:void(0)">22030</a>
+                    </div>
+                    <div class="col-xs-6">
+                      <div class="font-w700 text-gray-darker text-uppercase">Balance</div>
+                      <a class="h3 font-w300 text-primary" href="javascript:void(0)">$ 4.589,00</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- END Stats -->
+
+                <!-- Today -->
+                <div class="block-content block-content-full block-content-mini bg-gray-lighter">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <span class="font-w600 font-s13 text-gray-darker text-uppercase">Today</span>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <span class="font-s13 text-muted">$996</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-content">
+                  <ul class="list list-activity pull-r-l">
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $249</div>
+                      <div><small class="text-muted">3 min ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $129</div>
+                      <div><small class="text-muted">50 min ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $119</div>
+                      <div><small class="text-muted">2 hours ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $499</div>
+                      <div><small class="text-muted">3 hours ago</small></div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- END Today -->
+
+                <!-- Yesterday -->
+                <div class="block-content block-content-full block-content-mini bg-gray-lighter">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <span class="font-w600 font-s13 text-gray-darker text-uppercase">Yesterday</span>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                      <span class="font-s13 text-muted">$765</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="block-content">
+                  <ul class="list list-activity pull-r-l">
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $249</div>
+                      <div><small class="text-muted">26 hours ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-danger"></i>
+                      <div class="font-w600">Product Purchase - $50</div>
+                      <div><small class="text-muted">28 hours ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $119</div>
+                      <div><small class="text-muted">29 hours ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-danger"></i>
+                      <div class="font-w600">Paypal Withdrawal - $300</div>
+                      <div><small class="text-muted">37 hours ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $129</div>
+                      <div><small class="text-muted">39 hours ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $119</div>
+                      <div><small class="text-muted">45 hours ago</small></div>
+                    </li>
+                    <li>
+                      <i class="fa fa-circle text-success"></i>
+                      <div class="font-w600">New sale! + $499</div>
+                      <div><small class="text-muted">46 hours ago</small></div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- END Yesterday -->
+
+                <!-- More -->
+                <div class="text-center">
+                  <small><a href="javascript:void(0)">Load More..</a></small>
+                </div>
+                <!-- END More -->
+              </div>
+            </div>
+            <!-- END Sales Tab -->
+          </div>
+        </div>
+        <!-- END Side Overlay Tabs -->
+      </div>
+      <!-- END Side Content -->
+    </div>
+  </aside>
+  <nav id="sidebar">
+    <div id="sidebar-scroll">
+      <div class="sidebar-content">
+        <div class="side-header side-content bg-white-op">
+          <a class="h5 text-white" href="index.html">
+            <i class="fa fa-circle-o-notch text-primary"></i> <span class="h4 font-w600 sidebar-mini-hide">途风</span>
+          </a>
+        </div>
+        <div class="side-content">
+          <ul class="nav-main">
+            <li>
+              <a href="javascript:void 0" class="link" data-hbs-target="announce"><i class="si si-speedometer"></i><span class="sidebar-mini-hide">公司公告</span></a>
+            </li>
+            <li class="nav-main-heading"><span class="sidebar-mini-hide fz-16 font-w300">网站内容</span></li>
+            <li class="open">
+              <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">房源中心</span></a>
+              <ul>
+                <li>
+                  <a href="javascript:void 0" class="link text-click" data-hbs-target="properties_center">查看和新增</a>
+                </li>
+                <li>
+                  <a href="javascript:void 0" class="link" data-hbs-target="properties_type">房源类型管理</a>
+                </li>
+                <li>
+                  <a href="javascript:void 0" class="link" data-hbs-target="properties_room_type">房间类型管理</a>
+                </li>
+                <li>
+                  <a href="javascript:void 0" class="link" data-hbs-target="properties_amenities">设施管理</a>
+                </li>
+                <li>
+                  <a href="javascript:void 0" class="link" data-hbs-target="properties_city_group">城市圈管理</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="javascript:void 0" class="link" data-hbs-target="users_list"><i class="si si-badge"></i><span class="sidebar-mini-hide">用户中心</span></a>
+            </li>
+            <li>
+              <a href="javascript:void 0" class="link" data-hbs-target="orders_list"><i class="si si-badge"></i><span class="sidebar-mini-hide">订单中心</span></a>
+            </li>
+            <li>
+              <a href="javascript:void 0" class="link" data-hbs-target="personal_tailor"><i class="si si-badge"></i><span class="sidebar-mini-hide">私人定制</span></a>
+            </li>
+            <li>
+              <a href="javascript:void 0" class="link" data-hbs-target="paper_work"><i class="si si-badge"></i><span class="sidebar-mini-hide">文案中心</span></a>
+            </li>
+            <!--<li>-->
+              <!--<a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span class="sidebar-mini-hide">内容管理</span></a>-->
+              <!--<ul>-->
+                <!--<li>-->
+                  <!--<a href="javascript:void 0" class="link" data-hbs-target="content-search_hot">热门搜索列表</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                  <!--<a href="javascript:void 0" class="link" data-hbs-target="content-index_hot">热门目的地</a>-->
+                <!--</li>-->
+                <!--<li>-->
+                  <!--<a href="javascript:void 0" class="link" data-hbs-target="content-static_pages">静态页面</a>-->
+                <!--</li>-->
+              <!--</ul>-->
+            <!--</li>-->
+          </ul>
+        </div>
+        <!-- END Side Content -->
+      </div>
+      <!-- Sidebar Content -->
+</div>
+    <!-- END Sidebar Scroll Container -->
+  </nav>
+  <header id="header-navbar" class="content-mini content-mini-full">
+    <!-- Header Navigation Right -->
+    <ul class="nav-header pull-right">
+      <li>
+        <div class="btn-group">
+          <button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button">
+            <img src="static/assets/img/avatars/avatar10.jpg" alt="Avatar">
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li class="dropdown-header">Profile</li>
+            <li>
+              <a tabindex="-1" href="base_pages_inbox.html">
+                <i class="si si-envelope-open pull-right"></i>
+                <span class="badge badge-primary pull-right">3</span>Inbox
+              </a>
+            </li>
+            <li>
+              <a tabindex="-1" href="base_pages_profile.html">
+                <i class="si si-user pull-right"></i>
+                <span class="badge badge-success pull-right">1</span>Profile
+              </a>
+            </li>
+            <li>
+              <a tabindex="-1" href="javascript:void(0)">
+                <i class="si si-settings pull-right"></i>Settings
+              </a>
+            </li>
+            <li class="divider"></li>
+            <li class="dropdown-header">Actions</li>
+            <li>
+              <a tabindex="-1" href="base_pages_lock.html">
+                <i class="si si-lock pull-right"></i>Lock Account
+              </a>
+            </li>
+            <li>
+              <a tabindex="-1" href="javascript:void 0" class="btn_log_out">
+                <i class="si si-logout pull-right"></i>Log out
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+        <button class="btn btn-default" data-toggle="layout" data-action="side_overlay_toggle" type="button">
+          <i class="fa fa-tasks"></i>
+        </button>
+      </li>
+    </ul>
+    <!-- END Header Navigation Right -->
+
+    <!-- Header Navigation Left -->
+    <ul class="nav-header pull-left">
+      <li class="hidden-md hidden-lg">
+        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_toggle" type="button">
+          <i class="fa fa-navicon"></i>
+        </button>
+      </li>
+      <li class="hidden-xs hidden-sm">
+        <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+        <button class="btn btn-default" data-toggle="layout" data-action="sidebar_mini_toggle" type="button">
+          <i class="fa fa-ellipsis-v"></i>
+        </button>
+      </li>
+      <li>
+        <!-- Opens the Apps modal found at the bottom of the page, before including JS code -->
+        <button class="btn btn-default pull-right" data-toggle="modal" data-target="#apps-modal" type="button">
+          <i class="si si-grid"></i>
+        </button>
+      </li>
+      <li class="visible-xs">
+        <!-- Toggle class helper (for .js-header-search below), functionality initialized in App() -> uiToggleClass() -->
+        <button class="btn btn-default" data-toggle="class-toggle" data-target=".js-header-search" data-class="header-search-xs-visible" type="button">
+          <i class="fa fa-search"></i>
+        </button>
+      </li>
+      <li class="js-header-search header-search">
+        <form class="form-horizontal" action="base_pages_search.html" method="post">
+          <div class="form-material form-material-primary input-group remove-margin-t remove-margin-b">
+            <input class="form-control" type="text" id="base-material-text" name="base-material-text" placeholder="Search..">
+            <span class="input-group-addon"><i class="si si-magnifier"></i></span>
+          </div>
+        </form>
+      </li>
+    </ul>
+    <!-- END Header Navigation Left -->
+  </header>
+
+  <main id="main-container">
+    <div id="pageTitle"></div>
+    <div class="content" id="pageContent">
+      <h2 class="content-heading">Your content</h2>
+      <p>...</p>
+
+    </div>
+  </main>
+
+  <footer id="page-footer" class="content-mini content-mini-full font-s12 bg-gray-lighter clearfix">
+    <div class="pull-right">
+      Crafted with <i class="fa fa-heart text-city"></i> by <a class="font-w600" href="#;" target="_blank">Dino Chiu</a>
+    </div>
+    <div class="pull-left">
+      <a class="font-w600" href="#;" target="_blank">途风短租</a> &copy; <span class="js-year-copy"></span>
+    </div>
+  </footer>
+</div>
+
+<link rel="stylesheet" href="static/assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker3.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/select2/select2.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/select2/select2-bootstrap.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.skinHTML5.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/dropzonejs/dropzone.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/datatables/jquery.dataTables.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/summernote/summernote.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/summernote/summernote-bs3.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/sweetalert/sweetalert.min.css">
+<link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/slick/slick.min.css">
+<link rel="stylesheet" href="static/assets/js/plugins/slick/slick-theme.min.css">
+<link rel="stylesheet" href="static/assets/less/main.css">
+<link rel="stylesheet" href="static/assets/js/plugins/fullcalendar/fullcalendar.css">
+
+<script src='bower_components/localforage/dist/localforage.min.js'></script>
+<script src='bower_components/promise/promise-polyfills.js'></script>
+<script src="bower_components/parse-sdk/parse-latest.js"></script>
+<script src='bower_components/lodash/dist/lodash.min.js'></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src='bower_components/handlebars/handlebars.min.js'></script>
+<script src='bower_components/jquery-handlebars/js/functions/jquery.loadFromTemplate.js'></script>
+<script src='bower_components/swag/lib/swag.min.js'></script>
+<script src='bower_components/jquery-serialize-object/dist/jquery.serialize-object.min.js'></script>
+
+
+<script src="static/assets/js/core/bootstrap.min.js"></script>
+<script src="static/assets/js/core/jquery.slimscroll.min.js"></script>
+<script src="static/assets/js/core/jquery.scrollLock.min.js"></script>
+<script src="static/assets/js/core/jquery.appear.min.js"></script>
+<script src="static/assets/js/core/jquery.countTo.min.js"></script>
+<script src="static/assets/js/core/jquery.placeholder.min.js"></script>
+<script src="static/assets/js/core/js.cookie.min.js"></script>
+<script src="static/assets/js/app.js"></script>
+
+<script src="static/assets/js/plugins/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+<script src="static/assets/js/plugins/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min.js"></script>
+<script src="static/assets/js/plugins/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+<script src="static/assets/js/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="static/assets/js/plugins/select2/select2.full.min.js"></script>
+<script src="static/assets/js/plugins/masked-inputs/jquery.maskedinput.min.js"></script>
+<script src="static/assets/js/plugins/jquery-auto-complete/jquery.auto-complete.min.js"></script>
+<script src="static/assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
+<script src="static/assets/js/plugins/dropzonejs/dropzone.min.js"></script>
+<script src="static/assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+<script src="static/assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="static/assets/js/plugins/summernote/summernote.min.js"></script>
+<script src="static/assets/js/pages/base_tables_datatables.js"></script>
+
+<script type="text/javascript" src="bower_components/twbs-pagination/jquery.twbsPagination.min.js"></script>
+<script type="text/javascript" src="bower_components/simplemde/dist/simplemde.min.js"></script>
+<script type="text/javascript" src="bower_components/moment/moment.js"></script>
+<script type="text/javascript" src="bower_components/moment/locale/zh-cn.js"></script>
+<script type="text/javascript" src="bower_components/marked/marked.min.js"></script>
+
+<script type="text/javascript" src="bower_components/plupload/js/moxie.js"></script>
+<script type="text/javascript" src="bower_components/plupload/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="bower_components/plupload/js/i18n/zh_CN.js"></script>
+<script type="text/javascript" src="bower_components/qiniu/demo/scripts/ui.js"></script>
+<script type="text/javascript" src="bower_components/qiniu/dist/qiniu.min.js"></script>
+<script type="text/javascript" src="bower_components/qiniu/demo/scripts/highlight.js"></script>
+<script src="static/assets/js/plugins/jquery-tags-input/jquery.tagsinput.min.js"></script>
+<script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+<!-- Page JS Code -->
+<script src="static/assets/js/pages/base_forms_pickers_more.js"></script>
+
+<script src='static/assets/js/plugins/sweetalert/sweetalert.min.js'></script>
+<script src='static/assets/js/plugins/jquery-validation/jquery.validate.min.js'></script>
+<script src='static/assets/js/plugins/jquery-validation/additional-methods.js'></script>
+<script src="static/assets/js/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="static/assets/js/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="static/assets/js/plugins/fullcalendar/gcal.min.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

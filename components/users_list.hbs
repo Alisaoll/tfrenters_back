@@ -1,0 +1,604 @@
+<div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">编辑用户</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal user_info_form" action="" method="post" onsubmit="return false;">
+          <input type="hidden" name="" id="editId">
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="username" name="oData[username]" required>
+                    <label for="">用户名</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="nickname" name="oData[nickname]" required>
+                    <label for="">全名</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="phoneNumber" name="oData[phoneNumber]">
+                    <label for="">手机号</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="email" name="oData[email]">
+                    <label for="">email</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <select name="oData[identity][type]" id="idType" class="form-control">
+                      <option value="0">身份证</option>
+                      <option value="1">护照</option>
+                    </select>
+                    <label for="">证件类型</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <input class="form-control" type="text" id="idNum" name="oData[identity][number]">
+                    <label for="">证件号</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <!--<select name="oData[liveIn]" id="liveIn" class="form-control"></select>-->
+                      <input class="form-control" type="text" id="liveIn">
+                    <label for="">居住地</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <select name="oData[gender]" id="gender" class="form-control">
+                      <option value="0">男</option>
+                      <option value="1">女</option>
+                    </select>
+                    <label for="">性别</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-6 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <select name="oData[status]" id="" class="form-control">
+                      <option value="0">正常</option>
+                      <option value="1">封号</option>
+                    </select>
+                    <label for="">用户状态</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 m-b-10">
+                <div class="form-group">
+                    <div class="col-xs-12">
+                        <div class="form-material">
+                            <textarea class="form-control" type="text" id="remark" placeholder="请记录该房东的联系人 联系方式 等个人信息，此处仅供管理员可见"></textarea>
+                            <label for="">备注</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          <div class="row">
+            <div class="col-xs-12 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <div class="lang_option"></div>
+                    <label for="example2-select2-multiple">语言</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--<div class="row">-->
+            <!--<div class="col-xs-12 m-b-10">-->
+              <!--<div class="form-group">-->
+                <!--<div class="col-xs-12">-->
+                  <!--<div class="form-material">-->
+                    <!--<textarea name="oData[address]" id="address" cols="" rows="3" class="form-control"></textarea>-->
+                      <!--&lt;!&ndash;<input class="form-control" type="text">&ndash;&gt;-->
+                    <!--<label for="">居住具体地址</label>-->
+                  <!--</div>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+          <div class="row">
+            <div class="col-xs-12 m-b-10">
+              <div class="form-group">
+                <div class="col-xs-12">
+                  <div class="form-material">
+                    <div class="summernote" id="summernoteDesc"></div>
+                    <label for="">自我描述</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="p-t-30">
+          <a href="#;" class="btn btn-primary start_qiniu">上传照片</a>
+        </div>
+        <div class="p-t-30 qiniu_area dn">
+          <div class="row">
+            <input type="hidden" id="domain" value="">
+            <input type="hidden" id="uptoken">
+            <div class="col-md-12 m-b-20">
+              <div id="container">
+                <p>即时上传,默认第一张图片为封面</p>
+                <a class="btn btn-default btn-lg " id="pickfiles" href="#" >
+                  <i class="glyphicon glyphicon-plus"></i>
+                  <span>选择文件</span>
+                </a>
+              </div>
+            </div>
+            <div style="display:none" id="success" class="col-md-12">
+              <div class="alert-success p-10">
+                队列全部文件处理完毕
+              </div>
+            </div>
+            <div class="col-md-12 ">
+              <table class="table table-striped table-hover text-left"   style="margin-top:40px;display:none">
+                <thead>
+                <tr>
+                  <th class="col-md-4">文件名</th>
+                  <th class="col-md-2">文件大小</th>
+                  <th class="col-md-6">细节</th>
+                </tr>
+                </thead>
+                <tbody id="fsUploadProgress">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary btn_save">保存</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="content bg-gray-lighter">
+  <div class="row items-push">
+    <div class="col-sm-7">
+      <h1 class="page-heading">
+        用户中心 <small>用户的增删查改</small>
+      </h1>
+    </div>
+    <div class="col-sm-5 text-right hidden-xs">
+      <ol class="breadcrumb push-10-t">
+        <li>首页</li>
+        <li><a class="link-effect" href="">用户中心</a></li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="block dn">
+    <div class="block-header">
+      <ul class="block-options">
+        <li>
+          <button type="button"><i class="fa fa-share"></i></button>
+        </li>
+      </ul>
+      <h3 class="block-title">Filter</h3>
+      <div class="p-t-10">
+        <div class="alert alert-warning alert-dismissable">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+          <h3 class="font-w300 push-15">Warning</h3>
+          <p>1. admin able to export the table to a excel when click the icon witch at right</p>
+        </div>
+      </div>
+    </div>
+    <div class="block-content">
+      <form class="form-horizontal push-10-t filter_form" action="" method="post" onsubmit="return false;">
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="form-group">
+              <div class="col-xs-12">
+                <div class="form-material form-material-primary">
+                  <input class="form-control" type="text" id="" name="oData[objectId]">
+                  <label for="example-autocomplete2">objectId</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="js-autocomplete form-control" type="text" id="" name="example-autocomplete2">
+                <label for="">Name</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="js-autocomplete form-control" type="text" id="" name="example-autocomplete2">
+                <label for="">Host Name</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <select class="js-select2 form-control" id="example2-select2-multiple" name="example2-select2-multiple" style="width: 100%;" data-placeholder="" multiple>
+                  <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                  <option value="1">HTML</option>
+                  <option value="2">CSS</option>
+                  <option value="3">JavaScript</option>
+                  <option value="4">PHP</option>
+                  <option value="5">MySQL</option>
+                  <option value="6">Ruby</option>
+                  <option value="7">AngularJS</option>
+                </select>
+                <label for="example2-select2-multiple">Quit Rule</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <select class="js-select2 form-control" id="example2-select2-multiple" name="example2-select2-multiple" style="width: 100%;" data-placeholder="" multiple>
+                  <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                  <option value="1">HTML</option>
+                  <option value="2">CSS</option>
+                  <option value="3">JavaScript</option>
+                  <option value="4">PHP</option>
+                  <option value="5">MySQL</option>
+                  <option value="6">Ruby</option>
+                  <option value="7">AngularJS</option>
+                </select>
+                <label for="example2-select2-multiple">Status</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <select class="js-select2 form-control" id="example2-select2-multiple" name="example2-select2-multiple" style="width: 100%;" data-placeholder="" multiple>
+                  <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                  <option value="1">HTML</option>
+                  <option value="2">CSS</option>
+                  <option value="3">JavaScript</option>
+                  <option value="4">PHP</option>
+                  <option value="5">MySQL</option>
+                  <option value="6">Ruby</option>
+                  <option value="7">AngularJS</option>
+                </select>
+                <label for="example2-select2-multiple">facility items</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <select class="js-select2 form-control" id="example2-select2-multiple" name="example2-select2-multiple" style="width: 100%;" data-placeholder="" multiple>
+                  <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                  <option value="1">HTML</option>
+                  <option value="2">CSS</option>
+                  <option value="3">JavaScript</option>
+                  <option value="4">PHP</option>
+                  <option value="5">MySQL</option>
+                  <option value="6">Ruby</option>
+                  <option value="7">AngularJS</option>
+                </select>
+                <label for="example2-select2-multiple">security</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <select class="js-select2 form-control" id="example2-select2-multiple" name="example2-select2-multiple" style="width: 100%;" data-placeholder="" multiple>
+                  <option></option><!-- Required for data-placeholder attribute to work with Select2 plugin -->
+                  <option value="1">HTML</option>
+                  <option value="2">CSS</option>
+                  <option value="3">JavaScript</option>
+                  <option value="4">PHP</option>
+                  <option value="5">MySQL</option>
+                  <option value="6">Ruby</option>
+                  <option value="7">AngularJS</option>
+                </select>
+                <label for="example2-select2-multiple">host sex</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="example-autocomplete2">unit price min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">unit price max</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">at least days min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">at least days max</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="example-autocomplete2">people min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">people max</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">bathroom min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">bathroom max</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="example-autocomplete2">bed min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">bed max</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="example-autocomplete2">rating min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">rating max</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">order amount min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="form-control" type="text" id="example-autocomplete2" name="example-autocomplete2">
+                <label for="">order amount max</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="js-masked-date form-control" type="text" id="example-masked2-date1" name="example-masked2-date1" placeholder="dd/mm/yyyy">
+                <label for="example-masked2-date1">updateAt min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="js-masked-date form-control" type="text" id="example-masked2-date2" name="example-masked2-date1" placeholder="dd/mm/yyyy">
+                <label for="example-masked2-date2">updateAt max</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="js-masked-date form-control" type="text" id="example-masked2-date4" name="example-masked2-date1" placeholder="dd/mm/yyyy">
+                <label for="example-masked2-date4">createAt min</label>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3">
+            <div class="m-b-20">
+              <div class="form-material">
+                <input class="js-masked-date form-control" type="text" id="example-masked2-date3" name="example-masked2-date1" placeholder="dd/mm/yyyy">
+                <label for="example-masked2-date3">createAt max</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-right">
+          <button class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+      <div class="p-b-15"></div>
+    </div>
+  </div>
+    <!--用户的筛选-->
+    <!--<div class="block">-->
+        <!--<div class="block-header">-->
+            <!--<ul class="block-options">-->
+                <!--<li>-->
+                    <!--<button type="button"><i class="fa fa-share"></i></button>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<h3 class="block-title">用户查询过滤条件</h3>-->
+        <!--</div>-->
+
+        <!--<div class="block-content">-->
+            <!--<form id="filter-search" class="form-horizontal push-10-t filter_form" action="" method="post">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-xs-3">-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-xs-12">-->
+                                <!--<div class="form-material form-material-primary">-->
+                                    <!--<input class="form-control" type="text" id="filter-checkout" name="oData[objectId]" placeholder="不限制" />-->
+                                    <!--<label for="example-autocomplete2">用户邮箱</label>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3">-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-xs-12">-->
+                                <!--<div class="form-material form-material-primary">-->
+                                    <!--<input class="form-control" type="text" id="filter-propertyId" name="oData[objectId]" placeholder="无">-->
+                                    <!--<label for="example-autocomplete2">根据用户ID</label>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3">-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-xs-12">-->
+                                <!--<div class="form-material form-material-primary">-->
+                                    <!--<input class="form-control" type="text" id="filter-propertyName" name="oData[objectId]" placeholder="无">-->
+                                    <!--<label for="example-autocomplete2">根据用户名称(全称)</label>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="col-xs-3">-->
+                        <!--<div class="form-group">-->
+                            <!--<div class="col-xs-12">-->
+                                <!--<div class="form-material form-material-primary">-->
+
+                                    <!--<select name="oData[available]" id="filter-status" class="form-control">-->
+                                        <!--<option value="0">可见</option>-->
+                                        <!--<option value="1">封号</option>-->
+
+                                    <!--</select>-->
+
+                                    <!--<label for="example-autocomplete2">用户状态</label>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="clearfix visible-xs-block visible-md-block visible-lg-block"></div>-->
+                    <!--<div class="col-xs-1 col-xs-offset-11">-->
+                        <!--<button class="btn btn-primary">查询</button>-->
+                    <!--</div>-->
+            <!--</form>-->
+            <!--<div class="p-b-15"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+  <div class="block">
+
+    <div class="block-header">
+      <h3 class="block-title">用户列表</h3>
+    </div>
+    <div class="block-content">
+      <table class="table table-bordered table-striped" id="tableUsersList"></table>
+        <ul id="pagination-prop" class="pagination-sm"></ul>
+    </div>
+  </div>
+</div>
+<script src="js/controllers/users_list.js"></script>

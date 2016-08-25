@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "announce.js",
+  "sourceRoot": "",
+  "sources": [
+    "announce.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA,OAAO,CAAC,GAAR,CAAY,UAAZ"
+}

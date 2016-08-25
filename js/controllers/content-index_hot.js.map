@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "content-index_hot.js",
+  "sourceRoot": "",
+  "sources": [
+    "content-index_hot.coffee"
+  ],
+  "names": [],
+  "mappings": ""
+}
